@@ -12,65 +12,18 @@ public class CarDemo {
 
     public static void main(String[] args) {
 
-        Car Car1 = new Car(2007, "Honda");
-        Car Car2 = new Car(2015, "Ford");
-        Car Car3 = new Car(2002, "Toyota");
-        Car Car4 = new Car(2019, "Mercedes");
-        Car Car5 = new Car(2000, "Chevrolet");
+        Car Car = new Car(2007, "Toyota");
 
-        System.out.println(Car1.getYearModel() + ", "
-                + Car1.getMake() + ", "
-                + accelerate(37));
+        for (int i = 1; i <= 5; i++) {
+            Car.accelerate();
+            System.out.println("Current speed of the " + Car.getYearModel() + " " + Car.getMake() + " is " + Car.getSpeed());
+        }
 
-        System.out.println(Car2.getYearModel() + ", "
-                + Car2.getMake() + ", "
-                + accelerate(78));
+        System.out.println("------------------");
 
-        System.out.println(Car3.getYearModel() + ", "
-                + Car3.getMake() + ", "
-                + accelerate(46));
-
-        System.out.println(Car4.getYearModel() + ", "
-                + Car4.getMake() + ", "
-                + accelerate(13));
-
-        System.out.println(Car5.getYearModel() + ", "
-                + Car5.getMake() + ", "
-                + accelerate(67));
-
-        System.out.println("------------------------");
-
-        System.out.println(Car1.getYearModel() + ", "
-                + Car1.getMake() + ", "
-                + brake(34));
-
-        System.out.println(Car2.getYearModel() + ", "
-                + Car2.getMake() + ", "
-                + brake(37));
-
-        System.out.println(Car3.getYearModel() + ", "
-                + Car3.getMake() + ", "
-                + brake(89));
-
-        System.out.println(Car4.getYearModel() + ", "
-                + Car4.getMake() + ", "
-                + brake(24));
-
-        System.out.println(Car5.getYearModel() + ", "
-                + Car5.getMake() + ", "
-                + brake(23));
-
-    }
-
-    public static int accelerate(int speed) {
-        int acceleratedSpeed = speed + 5;
-
-        return acceleratedSpeed;
-    }
-
-    public static int brake(int speed) {
-        int speedBrake = speed - 5;
-
-        return speedBrake;
+        for (int i = 1; i <= 5; i++) {
+            Car.brake();
+            System.out.println("Current speed of the " + Car.getYearModel() + " " + Car.getMake() + " is " + Car.getSpeed());
+        }
     }
 }
